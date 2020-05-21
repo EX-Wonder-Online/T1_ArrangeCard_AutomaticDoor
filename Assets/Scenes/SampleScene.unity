@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 39563568}
   - component: {fileID: 39563567}
   - component: {fileID: 39563566}
-  - component: {fileID: 39563565}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Door
@@ -141,30 +140,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39563563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 1.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: 1.5, z: 0}
   m_LocalScale: {x: 5, y: 3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 504341129}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &39563565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39563563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be794d45d2cf449d0989d5f49b457010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 39563566}
-  startTime: 2
-  intervalTime: 2
-  closeTime: 2
-  openTime: 2
-  endPos: {x: 2.5, y: 1.5, z: 0}
 --- !u!54 &39563566
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -317,6 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504341129}
+  - component: {fileID: 504341130}
   m_Layer: 0
   m_Name: AutomaticDoor
   m_TagString: Untagged
@@ -340,6 +322,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504341130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504341128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261b537972ac4484d8f946c0d09201da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LeftDoor: {fileID: 1146059710}
+  m_RightDoor: {fileID: 39563563}
+  m_MaxLength: 10
+  m_RunTime: 3
+  m_WaitTime: 3
+  m_IsOpen: 1
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +435,6 @@ GameObject:
   - component: {fileID: 1146059715}
   - component: {fileID: 1146059714}
   - component: {fileID: 1146059713}
-  - component: {fileID: 1146059712}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Door
@@ -451,30 +450,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146059710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 1.5, z: 0}
+  m_LocalPosition: {x: -2.5, y: 1.5, z: 0}
   m_LocalScale: {x: 5, y: 3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 504341129}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1146059712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146059710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be794d45d2cf449d0989d5f49b457010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1146059713}
-  startTime: 2
-  intervalTime: 2
-  closeTime: 2
-  openTime: 2
-  endPos: {x: -2.5, y: 1.5, z: 0}
 --- !u!54 &1146059713
 Rigidbody:
   m_ObjectHideFlags: 0
